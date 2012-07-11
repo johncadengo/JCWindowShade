@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 extern NSString * const kRevealShadeViewSegueIdentifier;
+extern NSString * const kSwipeableAreaLabel;
+extern NSString * const kDragableAreaLabel;
 
 @interface JCViewController : UIViewController
 

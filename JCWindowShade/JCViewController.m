@@ -9,6 +9,8 @@
 #import "JCViewController.h"
 
 NSString * const kRevealShadeViewSegueIdentifier = @"RevealShadeView";
+NSString * const kSwipeableAreaLabel = @"Swipeable Area";
+NSString * const kDragableAreaLabel = @"Dragable Area";
 
 @interface JCViewController ()
 
@@ -26,11 +28,21 @@ NSString * const kRevealShadeViewSegueIdentifier = @"RevealShadeView";
     // Set up the swipeable area
     self.swipeableAreaView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 370.0f)];
     self.swipeableAreaView.backgroundColor = [UIColor brownColor];
+    UILabel *swipeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 160.0f, 320.0f, 50.0f)];
+    [swipeLabel setText:kSwipeableAreaLabel];
+    [swipeLabel setTextAlignment:UITextAlignmentCenter];
+    [swipeLabel setBackgroundColor:[UIColor clearColor]];
+    [self.swipeableAreaView addSubview:swipeLabel];
     [self.view addSubview:self.swipeableAreaView];
     
     // Draggable area
     self.dragableAreaView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 370.0f, 320.0f, 90.0f)];
-    self.dragableAreaView.backgroundColor = [UIColor yellowColor];
+    self.dragableAreaView.backgroundColor = [UIColor orangeColor];
+    UILabel *dragLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 320.0f, 50.0f)];
+    [dragLabel setText:kDragableAreaLabel];
+    [dragLabel setTextAlignment:UITextAlignmentCenter];
+    [dragLabel setBackgroundColor:[UIColor clearColor]];
+    [self.dragableAreaView addSubview:dragLabel];
     [self.view addSubview:self.dragableAreaView];
     
 }
