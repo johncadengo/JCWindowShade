@@ -20,6 +20,8 @@
 		67890E4F15AD114100B6927D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67890E3015AD114000B6927D /* Foundation.framework */; };
 		67890E5715AD114100B6927D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67890E5515AD114100B6927D /* InfoPlist.strings */; };
 		67890E5A15AD114100B6927D /* JCWindowShadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67890E5915AD114100B6927D /* JCWindowShadeTests.m */; };
+		67890E6515AD117600B6927D /* JCRevealShadeViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 67890E6415AD117600B6927D /* JCRevealShadeViewSegue.m */; };
+		67890E6815AD118A00B6927D /* JCShadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67890E6715AD118A00B6927D /* JCShadeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +39,25 @@
 		67890E2E15AD114000B6927D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67890E3015AD114000B6927D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		67890E3215AD114000B6927D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		67890E3615AD114000B6927D /* JCWindowShade-Info.plist */ = {isa = PBXFileReference; path = "JCWindowShade-Info.plist"; sourceTree = "<group>"; };
+		67890E3615AD114000B6927D /* JCWindowShade-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JCWindowShade-Info.plist"; sourceTree = "<group>"; };
 		67890E3815AD114000B6927D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67890E3A15AD114000B6927D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		67890E3C15AD114000B6927D /* JCWindowShade-Prefix.pch */ = {isa = PBXFileReference; path = "JCWindowShade-Prefix.pch"; sourceTree = "<group>"; };
-		67890E3D15AD114000B6927D /* JCAppDelegate.h */ = {isa = PBXFileReference; path = JCAppDelegate.h; sourceTree = "<group>"; };
+		67890E3C15AD114000B6927D /* JCWindowShade-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCWindowShade-Prefix.pch"; sourceTree = "<group>"; };
+		67890E3D15AD114000B6927D /* JCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCAppDelegate.h; sourceTree = "<group>"; };
 		67890E3E15AD114000B6927D /* JCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCAppDelegate.m; sourceTree = "<group>"; };
 		67890E4115AD114000B6927D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		67890E4315AD114000B6927D /* JCViewController.h */ = {isa = PBXFileReference; path = JCViewController.h; sourceTree = "<group>"; };
+		67890E4315AD114000B6927D /* JCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCViewController.h; sourceTree = "<group>"; };
 		67890E4415AD114000B6927D /* JCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCViewController.m; sourceTree = "<group>"; };
 		67890E4B15AD114100B6927D /* JCWindowShadeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JCWindowShadeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67890E4C15AD114100B6927D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		67890E5415AD114100B6927D /* JCWindowShadeTests-Info.plist */ = {isa = PBXFileReference; path = "JCWindowShadeTests-Info.plist"; sourceTree = "<group>"; };
+		67890E5415AD114100B6927D /* JCWindowShadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JCWindowShadeTests-Info.plist"; sourceTree = "<group>"; };
 		67890E5615AD114100B6927D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		67890E5815AD114100B6927D /* JCWindowShadeTests.h */ = {isa = PBXFileReference; path = JCWindowShadeTests.h; sourceTree = "<group>"; };
+		67890E5815AD114100B6927D /* JCWindowShadeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCWindowShadeTests.h; sourceTree = "<group>"; };
 		67890E5915AD114100B6927D /* JCWindowShadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCWindowShadeTests.m; sourceTree = "<group>"; };
+		67890E6315AD117600B6927D /* JCRevealShadeViewSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRevealShadeViewSegue.h; sourceTree = "<group>"; };
+		67890E6415AD117600B6927D /* JCRevealShadeViewSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRevealShadeViewSegue.m; sourceTree = "<group>"; };
+		67890E6615AD118A00B6927D /* JCShadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCShadeViewController.h; sourceTree = "<group>"; };
+		67890E6715AD118A00B6927D /* JCShadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCShadeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,10 @@
 				67890E4015AD114000B6927D /* MainStoryboard.storyboard */,
 				67890E4315AD114000B6927D /* JCViewController.h */,
 				67890E4415AD114000B6927D /* JCViewController.m */,
+				67890E6315AD117600B6927D /* JCRevealShadeViewSegue.h */,
+				67890E6415AD117600B6927D /* JCRevealShadeViewSegue.m */,
+				67890E6615AD118A00B6927D /* JCShadeViewController.h */,
+				67890E6715AD118A00B6927D /* JCShadeViewController.m */,
 				67890E3515AD114000B6927D /* Supporting Files */,
 			);
 			path = JCWindowShade;
@@ -261,6 +271,8 @@
 				67890E3B15AD114000B6927D /* main.m in Sources */,
 				67890E3F15AD114000B6927D /* JCAppDelegate.m in Sources */,
 				67890E4515AD114000B6927D /* JCViewController.m in Sources */,
+				67890E6515AD117600B6927D /* JCRevealShadeViewSegue.m in Sources */,
+				67890E6815AD118A00B6927D /* JCShadeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

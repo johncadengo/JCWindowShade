@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const kRevealShadeViewSegueIdentifier;
+
 @interface JCViewController : UIViewController
+
+@property (nonatomic, strong) UIView *swipeableAreaView;
+@property (nonatomic, strong) UIView *dragableAreaView;
 
 @end
