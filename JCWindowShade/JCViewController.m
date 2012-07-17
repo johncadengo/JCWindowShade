@@ -20,6 +20,9 @@ NSString * const kDragableAreaLabel = @"Dragable Area";
 
 @synthesize swipeableAreaView = _swipeableAreaView;
 @synthesize dragableAreaView = _dragableAreaView;
+@synthesize swipeUp = _swipeUp;
+@synthesize swipeDown = _swipeDown;
+@synthesize drag = _drag;
 
 - (void)viewDidLoad
 {
@@ -45,6 +48,22 @@ NSString * const kDragableAreaLabel = @"Dragable Area";
     [self.dragableAreaView addSubview:dragLabel];
     [self.view addSubview:self.dragableAreaView];
     
+    // Add our gesture recognizers
+    self.drag = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDrag:)];
+    [self.dragableAreaView addGestureRecognizer:self.drag];
+    [self.drag setDelegate:self];
+    [self.drag setCancelsTouchesInView:NO];
+    
+    self.swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    [self.swipeUp setDirection:UISwipeGestureRecognizerDirectionUp];
+    [self.swipeUp setDelegate:self];
+    
+    self.swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    [self.swipeDown setDirection:UISwipeGestureRecognizerDirectionDown];
+    [self.swipeDown setDelegate:self];
+    
+    [self.swipeableAreaView addGestureRecognizer:self.swipeDown];
+    [self.swipeableAreaView addGestureRecognizer:self.swipeUp];
 }
 
 - (void)viewDidUnload
@@ -64,5 +83,16 @@ NSString * const kDragableAreaLabel = @"Dragable Area";
         // Do any necessary preparations for revealing the shade view
     }
 }
+
+- (void)handleDrag:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    NSLog(@"drag");
+}
+
+- (void)handleSwipe:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    NSLog(@"swipe");
+}
+
 
 @end

@@ -12,9 +12,17 @@ extern NSString * const kRevealShadeViewSegueIdentifier;
 extern NSString * const kSwipeableAreaLabel;
 extern NSString * const kDragableAreaLabel;
 
-@interface JCViewController : UIViewController
+@interface JCViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView *swipeableAreaView;
 @property (nonatomic, strong) UIView *dragableAreaView;
+
+// Gesture recognizers
+@property (nonatomic, strong) UIPanGestureRecognizer *drag;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeUp;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeDown;
+
+- (void)handleDrag:(UIPanGestureRecognizer *)gestureRecognizer;
+- (void)handleSwipe:(UISwipeGestureRecognizer *)gestureRecognizer;
 
 @end
