@@ -185,7 +185,7 @@ NSString * const kDragDownLabel = @"Drag Down";
             // Only allow dragging to a certain point. Don't let drag further down.
             CGPoint translatedPoint = [gestureRecognizer translationInView:self.view];
             
-            // Our offset is different depending on if the filter is showing or not
+            // Our offset is different depending on if the revealable view is showing or not
             CGFloat offset = (self.isRevealableViewShowing) ? self.swipeableViewFrame.size.height : 0.0f;
             
             if (translatedPoint.y < offset) {
@@ -207,7 +207,7 @@ NSString * const kDragDownLabel = @"Drag Down";
 - (void)handleSwipe:(UISwipeGestureRecognizer *)gestureRecognizer
 {
     if (self.swipeUp == gestureRecognizer && !self.isRevealableViewShowing) {
-        // If the filter isn't showing, and we swipe up, then show it
+        // If the  revealable view isn't showing, and we swipe up, then show it
         [UIView animateWithDuration:1.0f
                               delay:0.0
                             options:UIViewAnimationCurveLinear
@@ -219,7 +219,7 @@ NSString * const kDragDownLabel = @"Drag Down";
                          }];
     }
     else if (self.swipeDown == gestureRecognizer && self.isRevealableViewShowing) {
-        // If the filter is showing, and we swipe down, then hide it
+        // If the  revealable view is showing, and we swipe down, then hide it
         [UIView animateWithDuration:1.0f
                               delay:0.0
                             options:UIViewAnimationCurveLinear
