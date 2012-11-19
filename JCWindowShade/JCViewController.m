@@ -92,7 +92,11 @@ NSString * const kDragDownLabel = @"Drag Down";
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
     // Release any retained subviews of the main view.
+    self.swipeableView = nil;
+    self.dragableView = nil;
+    self.revealableView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
