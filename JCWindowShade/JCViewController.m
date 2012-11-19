@@ -28,6 +28,7 @@ NSString * const kDragDownLabel = @"Drag Down";
 @synthesize revealableViewFrame = _revealableViewFrame;
 @synthesize swipeUp = _swipeUp;
 @synthesize swipeDown = _swipeDown;
+@synthesize dragableViewLabel = _dragableViewLabel;
 @synthesize drag = _drag;
 @synthesize dragging = _dragging;
 @synthesize revealableViewShowing = _revealableShowing;
@@ -52,11 +53,11 @@ NSString * const kDragDownLabel = @"Drag Down";
     self.dragableViewFrame = CGRectMake(0.0f, 370.0f, 320.0f, 90.0f);
     self.dragableView = [[UIView alloc] initWithFrame:self.dragableViewFrame];
     self.dragableView.backgroundColor = [UIColor orangeColor];
-    UILabel *dragLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 320.0f, 50.0f)];
-    [dragLabel setText:kDragUpLabel];
-    [dragLabel setTextAlignment:UITextAlignmentCenter];
-    [dragLabel setBackgroundColor:[UIColor clearColor]];
-    [self.dragableView addSubview:dragLabel];
+    self.dragableViewLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 20.0f, 320.0f, 50.0f)];
+    [self.dragableViewLabel setText:kDragUpLabel];
+    [self.dragableViewLabel setTextAlignment:UITextAlignmentCenter];
+    [self.dragableViewLabel setBackgroundColor:[UIColor clearColor]];
+    [self.dragableView addSubview:self.dragableViewLabel];
     [self.view addSubview:self.dragableView];
     
     // Revealable area. Initially hidden, but if you swipe or drag up it will show
@@ -110,12 +111,14 @@ NSString * const kDragDownLabel = @"Drag Down";
 - (void)hideRevealableView
 {
     [self offsetFrames:0.0f];
+    [self.dragableViewLabel setText:kDragUpLabel];
 }
 
 - (void)showRevealableView
 {
     [self performSegueWithIdentifier:kRevealShadeViewSegueIdentifier sender:nil];
     [self offsetFrames:-self.swipeableViewFrame.size.height];
+    [self.dragableViewLabel setText:kDragDownLabel];
 }
 
 - (void)offsetFrames:(CGFloat)offset

@@ -29,6 +29,7 @@ extern NSString * const kDragDownLabel;
 // State
 @property (nonatomic, getter=isDragging) BOOL dragging;
 @property (nonatomic, getter=isRevealableViewShowing) BOOL revealableViewShowing;
+@property (nonatomic, strong) UILabel *dragableViewLabel;
 
 // Gesture recognizers
 @property (nonatomic, strong) UIPanGestureRecognizer *drag;
