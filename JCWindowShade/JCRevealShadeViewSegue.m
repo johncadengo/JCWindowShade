@@ -7,7 +7,13 @@
 //
 
 #import "JCRevealShadeViewSegue.h"
+#import "JCViewController.h"
 
 @implementation JCRevealShadeViewSegue
+
+- (void)perform
+{
+    NSLog(@"Performing custom segue");
+}
 
 @end
